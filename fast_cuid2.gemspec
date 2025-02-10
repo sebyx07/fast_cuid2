@@ -21,10 +21,12 @@ Gem::Specification.new do |spec|
   # Include C extension
   spec.extensions = ['ext/fast_cuid2/extconf.rb']
 
-  # Include files
-  spec.files = Dir.glob('{lib,ext}/**/*') + ['README.md']
+  # Include both lib and ext directories
+  spec.files = Dir.glob('{lib,ext}/{**/*,*}') +
+    ['README.md', File.basename(__FILE__)]
 
-  spec.require_paths = ['lib']
+  # Set require paths for both the gem and extension
+  spec.require_paths = %w[lib/gem lib]
 
   # Development dependencies
   spec.add_development_dependency 'rake', '~> 13.0'

@@ -32,6 +32,10 @@ gem 'faker', '~> 3.4', '>= 3.4.2'
 
 gem 'rake-compiler', '~> 1.2', require: false
 
+gem 'cuid2', '~> 1.0', '>= 1.0.1'
+
+gem 'get_process_mem', '~> 1.0'
+
 group :test do
   gem 'benchmark-ips'
 end

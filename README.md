@@ -95,6 +95,26 @@ FastCuid2 is implemented in C for maximum performance. It uses:
 - 💾 Minimal memory allocations
 - 🔄 Thread-safe implementation
 
+### Benchmarks 📊
+
+Compared to the pure Ruby implementation (cuid2 gem), FastCuid2 shows significant performance improvements:
+
+```
+Single thread performance (10,000 iterations):
+                           user     system      total        real
+FastCuid2:             0.008065   0.001017   0.009082 (  0.009079)
+Cuid2:                 1.993880   0.003501   1.997381 (  1.998460)
+
+Detailed IPS (Iterations Per Second):
+           FastCuid2:  1,232,654.8 i/s
+               Cuid2:      5,087.0 i/s - 242.31x slower
+```
+
+Testing Environment:
+- Ruby 3.4.1 with YJIT and PRISM
+- Linux x86_64
+- Both implementations maintain the same security guarantees and format specifications
+
 ## Development 👩‍💻
 
 After checking out the repo, run:
