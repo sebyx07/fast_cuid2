@@ -8,13 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors = ['sebi']
   spec.email = ['gore.sebyx@yahoo.com']
 
-  spec.summary = 'Transform Ruby code into beautiful, structured HTML with C-optimized performance'
-  spec.description = 'Ruby2HTML empowers developers to write view logic in pure Ruby, ' \
-    'seamlessly converting it into clean, well-formatted HTML. ' \
-    'Enhance your templating workflow, improve readability, and ' \
-    'leverage the full power of Ruby in your views. ' \
-    'Features include Rails integration, custom component support, ' \
-    'automatic HTML beautification, and C-optimized rendering performance.'
+  spec.summary = 'Fast CUID2 generator with C extension'
+  spec.description = 'High-performance CUID2 (Collision-resistant Unique ID) generator ' \
+    'implemented in C for maximum speed while maintaining cryptographic security.'
   spec.homepage = 'https://github.com/sebyx07/fast_cuid2'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.0.0'
@@ -25,19 +21,12 @@ Gem::Specification.new do |spec|
   # Include C extension
   spec.extensions = ['ext/fast_cuid2/extconf.rb']
 
-  # Include both lib and ext directories
-  spec.files = Dir.glob('{lib,ext}/{**/*,*}') +
-    ['README.md', File.basename(__FILE__)]
+  # Include files
+  spec.files = Dir.glob('{lib,ext}/**/*') + ['README.md']
 
-  # Set require paths for both the gem and extension
-  spec.require_paths = %w[lib/gem lib]
-
-  # Runtime dependencies
-  spec.add_dependency 'htmlbeautifier', '>= 1.4'
+  spec.require_paths = ['lib']
 
   # Development dependencies
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rake-compiler', '~> 1.2'
-  spec.add_development_dependency 'minitest', '~> 5.14'
-  spec.add_development_dependency 'benchmark-ips', '~> 2.10'
 end

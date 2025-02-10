@@ -30,8 +30,6 @@ gem 'lefthook', '~> 1.7'
 
 gem 'faker', '~> 3.4', '>= 3.4.2'
 
-gem 'slim-rails', '~> 3.6', '>= 3.6.3'
-
 gem 'rake-compiler', '~> 1.2', require: false
 
 group :test do

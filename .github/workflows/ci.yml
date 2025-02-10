@@ -27,6 +27,9 @@ jobs:
       - name: Compile C extension
         run: bundle exec rake compile
 
+      - name: Setup database
+        run: bundle exec rake db:create db:schema:load
+
       - name: RSPEC
         run: bundle exec rspec
 
