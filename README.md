@@ -4,7 +4,7 @@ A high-performance CUID2 (Collision-resistant Unique ID) generator for Ruby, imp
 
 ## What is CUID2? 🤔
 
-CUID2 is the next generation of collision-resistant ids, designed to be:
+[CUID2](https://github.com/paralleldrive/cuid2) is the next generation of collision-resistant ids, designed to be:
 - 🔒 Secure: Uses cryptographically secure random numbers
 - 📏 Shorter: 24 characters vs CUID1's 25
 - 🔗 URL-safe: Uses a restricted character set
@@ -89,7 +89,7 @@ Each CUID2 is a 24-character string that:
 
 ## Performance ⚡
 
-FastCuid2 is implemented in C for maximum performance. It uses:
+FastCuid2 gem is implemented in C for maximum performance. It uses:
 - 🔒 OpenSSL's CSPRNG for secure random numbers
 - ⚙️ Optimized bit operations
 - 💾 Minimal memory allocations
